@@ -1,0 +1,10 @@
+{% extends './base.html' %}
+
+{% block content %}
+
+{{data|linenumbers|linebreaksbr}}
+<br><br>
+O texto possui: {{data|length}} letras do alfabeto<br>
+
+E {{data.split|length}} palavras
+{% endblock %}
