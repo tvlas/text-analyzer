@@ -1,0 +1,22 @@
+input[type="file"] {
+    margin-left: 5%;
+    border: 2px solid rgb(27, 27, 27);
+    border-radius: 40px;
+    background-color: rgb(119, 119, 119);
+}
+
+.container {
+    background-color: rgb(42, 42, 42);
+    border-radius: 10px;
+    width: 400px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    text-align: center;
+    color: rgb(195, 195, 195);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
