@@ -27,3 +27,10 @@ input[type="file"] {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
+
+.autor {
+    color: rgb(49, 49, 49);
+    position: absolute;
+    top: 95%;
+    left: 77%;
+}
