@@ -2,13 +2,14 @@
 
 
 {% block content %}
-    <div class = "container">
-    <h2 class = "title">File Upload</h2>
+    <div class= "container">
+    <h2 class= "title">File Upload</h2>
     
     <form action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <input type="file" name="document">
         <button type ="submit"> Enviar</button>
     </form>
+    <h3 class="inst"> Selecione o arquivo txt para analise</h3>
 </div>
 {% endblock %}
