@@ -1,10 +1,17 @@
 {% extends './base.html' %}
 
 {% block content %}
-
+<div class="result_content">
+    <div class="result">
 {{data|linenumbers|linebreaksbr}}
 <br><br>
-O texto possui: {{data|length}} letras do alfabeto<br>
+O texto possui: {{data|length}} letras do alfabeto.<br>
 
-E {{data.split|length}} palavras
+Com um total de {{data.split|length}} palavras.<br><br>
+
+
+    </div>
+<input class="result_bt" type="button" value="Voltar" onclick="history.back()">
+</div>
+
 {% endblock %}

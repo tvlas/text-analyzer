@@ -34,3 +34,27 @@ input[type="file"] {
     top: 95%;
     left: 77%;
 }
+
+
+.result_content {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(221, 221, 221);
+    width:fit-content;
+    height:fit-content;
+}
+
+
+.result {
+    background-color: rgb(241, 248, 210);
+    width:fit-content;
+    height: fit-content;
+}
+
+.result_bt {
+    margin-left:43%;
+    margin-top:5px;
+    border: 2px solid rgb(27, 27, 27);
+    border-radius: 40px;
+    background-color: rgb(248, 255, 189);
+}

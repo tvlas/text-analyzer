@@ -3,9 +3,10 @@ from django.http import HttpResponse
 from django.http import HttpRequest, HttpResponse
 from django.views import View
 from pathlib import Path
-
 from upload.forms import UploadFile
 from django.core.files.storage import FileSystemStorage
+from django.db import models
+import os
 
 
 # Create your views here.
@@ -36,7 +37,10 @@ class Upload(View):
             extension = ".txt"
             file_with_extension = next(path.glob(f"*{extension}"))
             if file_with_extension:
-                with open(file_with_extension) as file:
+                with open(file_with_extension, encoding='utf8') as file:
                     data = file.read()
                     context = {'data': data.strip(), 'len': len(data)}
+                    file.close()
+                    fs.delete(upload_file.name)
                     return render(request, 'upload/showfile.html', context)
+
