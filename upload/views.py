@@ -1,27 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from django.http import HttpRequest, HttpResponse
+from django.http import HttpRequest
 from django.views import View
 from pathlib import Path
-from upload.forms import UploadFile
 from django.core.files.storage import FileSystemStorage
-from django.db import models
-import os
-
-
-# Create your views here.
-
-'''class Upload(View):
-    def get(self, request: HttpRequest):
-        form = UploadFile()
-        return render(request, 'upload/upload.html', locals())
-
-    def post(self, request: HttpRequest):
-        file = open('.\static\\read.txt', 'r')
-        data = file.read()
-        file.close()
-        context = {'data': data.strip(), 'len': len(data)}
-        return render(request, 'upload/showfile.html', context)'''
 
 
 class Upload(View):
@@ -43,4 +24,3 @@ class Upload(View):
                     file.close()
                     fs.delete(upload_file.name)
                     return render(request, 'upload/showfile.html', context)
-
