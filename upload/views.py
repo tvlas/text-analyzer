@@ -1,12 +1,14 @@
 from django.shortcuts import render
-from django.http import HttpRequest
+from django.http import HttpRequest, HttpResponse
 from django.views import View
 from pathlib import Path
 from django.core.files.storage import FileSystemStorage
+from upload.forms import UploadFile
 
 
 class Upload(View):
     def get(self, request: HttpRequest):
+        form = UploadFile()
         return render(request, 'upload/upload.html', locals())
 
     def post(self, request: HttpRequest):
